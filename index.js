@@ -87,6 +87,8 @@ app.post('/candidates', async (req, res) => {
 app.get('/candidates', async (req, res) => {
  
     const result = await candidateCollection.find().toArray()
+
+    
     res.send(result)
 })
 
