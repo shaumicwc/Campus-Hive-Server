@@ -85,9 +85,8 @@ app.post('/candidates', async (req, res) => {
 })
 
 app.get('/candidates', async (req, res) => {
-    const email = req.query.email;
-    const query = { email: email }
-    const result = await candidateCollection.find(query).toArray()
+ 
+    const result = await candidateCollection.find().toArray()
     res.send(result)
 })
 
